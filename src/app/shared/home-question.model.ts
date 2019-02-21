@@ -8,3 +8,14 @@ questionUserName:string;
 
 }
 
+// export class HomeQuestion {
+
+//     status:string;
+//     error:{errorCode:number,message:string};
+    
+
+
+    
+//     }
+    
+    

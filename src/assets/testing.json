@@ -1,0 +1,7 @@
+{
+    "status": "error",
+    "error": {
+    "errorCode": 404,
+    "message": "No entity found"
+    }
+    }
