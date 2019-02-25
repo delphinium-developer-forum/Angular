@@ -1,0 +1,29 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<div class="collection" *ngFor="let q of answer.answerList" style="background-color: azure">
+  
+  <a href="#!" class="collection-item myclass" >{{q.answer}}</a>
+  <div class="myclass2">
+  <a onselect="upvote()"><i class='fas fa-arrow-alt-circle-up' style='font-size:36px'></i></a>
+  <i class='fas fa-arrow-alt-circle-down' style='font-size:36px'></i>
+  </div>
+  <br>
+  <div>
+      <form #ansPosting="ngForm" (ngSubmit)="OnSubmit(answ.value,q.quesId)">
+       <br>
+        <label>Your Answer</label> 
+        <input #answ type="text" name="answer" >
+    <button type="submit">Submit</button>
+    </form>
+    </div>
+</div>
+
+<!--<div>
+  <form #ansPosting="ngForm" (ngSubmit)="OnSubmit(answ.value)">
+    <label>Your Answer</label>
+    <input #answ type="text" name="answer" >
+<button type="submit">Submit</button>
+</form>
+</div>-->
