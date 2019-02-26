@@ -24,9 +24,9 @@ export class AnsersService {
 
   readonly home_ques_url="http://b38675b6.ngrok.io/api/Answers/GetAnswers/";
 
-  answerUrl = "http://ad352f44.ngrok.io/api/Answers/UploadAnswers";
+  answerUrl = "http://b38675b6.ngrok.io/api/Answers/UploadAnswers";
 
-  voteUrl = "http://ad352f44.ngrok.io/api/Votes/UploadVotes";
+  voteUrl = "http://b38675b6.ngrok.io/api/Votes/UploadVotes";
 
   constructor(private http:HttpClient)
    { }
@@ -35,6 +35,7 @@ export class AnsersService {
 
        console.log('inside ansques');
        
+
    return  this.http.get(this.home_ques_url + id +'/1')
    .toPromise().then(res=>this.answerList=res as Answer[]);
    //console.log('after home');
