@@ -19,7 +19,7 @@ export class DataService{
     public imgret;
 
     postFile(fileToUpload : File){
-        const endpoint = 'http://d5b0d811.ngrok.io/api/UploadImage';
+        const endpoint = 'http://d5b0d811.ngrok.io/api/UploadImage/dummy';
       
         const formData : FormData = new FormData();
         //formData.append('Id','1');

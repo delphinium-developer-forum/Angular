@@ -12,8 +12,8 @@ export class HomeQuestionService {
 
   questionList:HomeQuestion[];
 
-  readonly home_ques_url="http://b38675b6.ngrok.io/api/Questions/GetQuestions/1";
-  goquesUrl = "http://b38675b6.ngrok.io/api/Questions/UploadQuestions";
+  readonly home_ques_url="http://09227a7c.ngrok.io/api/Questions/GetQuestions/1";
+  goquesUrl = "http://5354d30c.ngrok.io/api/Questions/UploadQuestions";
 
   constructor(private http:HttpClient)
    { }

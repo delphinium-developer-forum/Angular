@@ -10,6 +10,7 @@ import { AnswersComponent } from './answers/answers.component';
 import { FormsModule }   from '@angular/forms';
 import { AskQuestionComponent } from './ask-question/ask-question.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
+import { QuestionPaginationComponent } from './question-pagination/question-pagination.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
     HomeComponent,
     AnswersComponent,
     AskQuestionComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    QuestionPaginationComponent
   ],
   imports: [
     BrowserModule,
