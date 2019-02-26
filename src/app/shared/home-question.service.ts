@@ -13,6 +13,7 @@ export class HomeQuestionService {
   questionList:HomeQuestion[];
 
   readonly home_ques_url="http://09227a7c.ngrok.io/api/Questions/GetQuestions/1";
+
   goquesUrl = "http://09227a7c.ngrok.io/api/Questions/UploadQuestions";
 
   constructor(private http:HttpClient)

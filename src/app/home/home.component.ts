@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
     console.log('before');
     
     this.homeQues.getHomeQuestionList();
-    // for(let a in this.homeQues.questionList)
-    // console.log(a.questionData);
+   // console.log(this.homeQues.questionList[0].data[0].question);
+    
   }
 
 }
