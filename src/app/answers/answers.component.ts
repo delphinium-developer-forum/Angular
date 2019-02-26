@@ -15,8 +15,9 @@ export class AnswersComponent implements OnInit {
 
   ngOnInit() {
 
-    const id = +this.route.snapshot.paramMap.get('id');
-
+   const id = +this.route.snapshot.paramMap.get('id');
+    console.log(id);
+    
     this.answer.getAnswerList(id);
 
   }
