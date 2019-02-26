@@ -10,7 +10,7 @@ export class HomeQuestionService {
 
   questionList:HomeQuestion[];
 
-  readonly home_ques_url="http://ad352f44.ngrok.io/api/Questions/GetQuestions";
+  readonly home_ques_url="http://b38675b6.ngrok.io/api/Questions/GetQuestions/1";
   constructor(private http:HttpClient)
    { }
 

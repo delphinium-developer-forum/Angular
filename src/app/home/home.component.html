@@ -1,5 +1,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
       <div class="collection" *ngFor="let q of homeQues.questionList" style="background-color: red">
+        <!-- <a routerLink="/answers" class="collection-item">{{q.question}}</a> -->
         <a routerLink="/answers/{{q.quesId}}" class="collection-item">{{q.question}}</a>
       </div>
