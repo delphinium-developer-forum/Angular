@@ -47,7 +47,7 @@ export class AnswersComponent implements OnInit {
   }
 
   upvote(){
-    this.http.post(this.answer.answerUrl,
+    this.http.post(this.answer.voteUrl,
       {
         "ansId":"13",
         "Id": "dummy",
@@ -56,7 +56,25 @@ export class AnswersComponent implements OnInit {
         //"Id": "dummy",
         //"answer": ans
       }).subscribe(data=>{
-        console.log("Post rewquest successful",data);
+        console.log("upvote rewquest successful",data);
+      },
+      error=>{
+        console.log("Error",error);
+      }
+      );
+  }
+
+  downvote(){
+    this.http.post(this.answer.voteUrl,
+      {
+        "ansId":"13",
+        "Id": "dummy",
+        "votes": '-1'
+        //"quesId": qid,
+        //"Id": "dummy",
+        //"answer": ans
+      }).subscribe(data=>{
+        console.log("downvote rewquest successful",data);
       },
       error=>{
         console.log("Error",error);

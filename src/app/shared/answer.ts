@@ -7,6 +7,7 @@ export class Answer {
        quesId;
        ansId;
        answer;
+       votes;
         
 
         
