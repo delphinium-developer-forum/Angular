@@ -1,0 +1,31 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<div class="collection fontSizeClass" *ngFor="let q of answer.answerList" style="background-color: white">
+  
+  <a  class="collection-item myclass" >{{q.answer}}</a>
+  <div class="myclass2">
+  <a (click)="upvote()"><i class='far fa-thumbs-up' style='font-size:20px'></i></a>
+  <div><h6>{{q.votes}}</h6></div>
+  <a (click)="downvote()"><i class='far fa-thumbs-down' style='font-size:20px'></i></a>
+  </div>
+  <br>
+</div>
+  <div>
+      <form #ansPosting="ngForm" (ngSubmit)="OnSubmit(answ.value,q.quesId)">
+       <br>
+       <label><h5>Your Answer</h5></label> 
+        <input #answ type="text" name="answer" >
+    <button type="submit">Submit</button>
+    </form>
+    </div>
+
+
+<!--<div>
+  <form #ansPosting="ngForm" (ngSubmit)="OnSubmit(answ.value)">
+    <label>Your Answer</label>
+    <input #answ type="text" name="answer" >
+<button type="submit">Submit</button>
+</form>
+</div>-->
