@@ -19,14 +19,14 @@ export class AnsersService {
 
   answerList:Answer[];
 
-  readonly goquesUrl = "http://b38675b6.ngrok.io/api/Questions/UploadQuestions";
+  readonly goquesUrl = "http://09227a7c.ngrok.io/api/Questions/UploadQuestions";
 
 
-  readonly home_ques_url="http://b38675b6.ngrok.io/api/Answers/GetAnswers/";
+  readonly home_ques_url="http://09227a7c.ngrok.io/api/Answers/GetAnswers/";
 
-  answerUrl = "http://b38675b6.ngrok.io/api/Answers/UploadAnswers";
+  answerUrl = "http://09227a7c.ngrok.io/api/Answers/UploadAnswers";
 
-  voteUrl = "http://b38675b6.ngrok.io/api/Votes/UploadVotes";
+  voteUrl = "http://09227a7c.ngrok.io/api/Votes/UploadVotes";
 
   constructor(private http:HttpClient)
    { }
