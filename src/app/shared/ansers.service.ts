@@ -2,10 +2,13 @@ import { Injectable } from '@angular/core';
 import { Answer } from '../shared/answer';
 import { HttpClient } from '@angular/common/http';
 import { answerdata } from '../shared/answergo';
-import {NgForm} from '@angular/forms'
+import {NgForm} from '@angular/forms';
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class AnsersService {
 
   
@@ -16,8 +19,10 @@ export class AnsersService {
 
   answerList:Answer[];
 
+  readonly goquesUrl = "http://b38675b6.ngrok.io/api/Questions/UploadQuestions";
 
-  readonly home_ques_url="http://ad352f44.ngrok.io/api/Answers/GetAnswers/";
+
+  readonly home_ques_url="http://b38675b6.ngrok.io/api/Answers/GetAnswers/";
 
   answerUrl = "http://ad352f44.ngrok.io/api/Answers/UploadAnswers";
 
@@ -30,7 +35,7 @@ export class AnsersService {
 
        console.log('inside ansques');
        
-   return  this.http.get(this.home_ques_url + id)
+   return  this.http.get(this.home_ques_url + id +'/1')
    .toPromise().then(res=>this.answerList=res as Answer[]);
    //console.log('after home');
    

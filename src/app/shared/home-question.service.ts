@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HomeQuestion } from './home-question.model';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +12,9 @@ export class HomeQuestionService {
 
   questionList:HomeQuestion[];
 
-  readonly home_ques_url="http://ad352f44.ngrok.io/api/Questions/GetQuestions";
+  readonly home_ques_url="http://b38675b6.ngrok.io/api/Questions/GetQuestions/1";
+  goquesUrl = "http://b38675b6.ngrok.io/api/Questions/UploadQuestions";
+
   constructor(private http:HttpClient)
    { }
 
@@ -26,5 +30,9 @@ export class HomeQuestionService {
    //console.log(questionList.questionData);
    
    
+   }
+
+   postQuestion(question){
+    return this.http.post(this.goquesUrl,question);
    }
 }
