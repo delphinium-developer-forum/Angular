@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnswersComponent } from './answers/answers.component';
 import { FormsModule }   from '@angular/forms';
+import { AskQuestionComponent } from './ask-question/ask-question.component';
+import { UploadImageComponent } from './upload-image/upload-image.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { FormsModule }   from '@angular/forms';
     AppComponent,
     NavComponentComponent,
     HomeComponent,
-    AnswersComponent
+    AnswersComponent,
+    AskQuestionComponent,
+    UploadImageComponent
   ],
   imports: [
     BrowserModule,
