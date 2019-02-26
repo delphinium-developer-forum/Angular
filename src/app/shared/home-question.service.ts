@@ -12,8 +12,8 @@ export class HomeQuestionService {
 
   questionList:HomeQuestion[];
 
-  readonly home_ques_url="http://b38675b6.ngrok.io/api/Questions/GetQuestions/1";
-  goquesUrl = "http://b38675b6.ngrok.io/api/Questions/UploadQuestions";
+  readonly home_ques_url="http://f5417910.ngrok.io/api/Questions/GetQuestions/1";
+  
 
   constructor(private http:HttpClient)
    { }
@@ -32,7 +32,5 @@ export class HomeQuestionService {
    
    }
 
-   postQuestion(question){
-    return this.http.post(this.goquesUrl,question);
-   }
+  
 }
