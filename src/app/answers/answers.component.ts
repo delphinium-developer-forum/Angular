@@ -3,6 +3,7 @@ import { AnsersService } from "../shared/ansers.service";
 import { ActivatedRoute } from '@angular/router';
 import{NgForm} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-answers',
   templateUrl: './answers.component.html',
