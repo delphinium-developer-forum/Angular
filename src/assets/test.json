@@ -1,0 +1,86 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "quesId": 1,
+            "question": "What is AngularJS?",
+            "activityDate": "2019-02-20T00:00:00",
+            "userName": "harshit",
+            "userId": "22b468cf-532f-4045-8c91-797091df25d5"
+        },
+        {
+            "quesId": 15,
+            "question": "Explain ng-app directive.",
+            "activityDate": "2019-02-14T00:00:00",
+            "userName": "harshit123",
+            "userId": "ace12cbe-905d-4dab-8f2d-79d54c2148f3"
+        },
+        {
+            "quesId": 14,
+            "question": "How AngularJS integrates with HTML?",
+            "activityDate": "2019-02-13T00:00:00",
+            "userName": "harshit123",
+            "userId": "ace12cbe-905d-4dab-8f2d-79d54c2148f3"
+        },
+        {
+            "quesId": 13,
+            "question": "Explain AngularJS boot process.",
+            "activityDate": "2019-02-12T00:00:00",
+            "userName": "harshit123",
+            "userId": "ace12cbe-905d-4dab-8f2d-79d54c2148f3"
+        },
+        {
+            "quesId": 12,
+            "question": "Which are the core directives of AngularJS?",
+            "activityDate": "2019-02-11T00:00:00",
+            "userName": "harshit",
+            "userId": "22b468cf-532f-4045-8c91-797091df25d5"
+        },
+        {
+            "quesId": 11,
+            "question": "What are the advantages of AngularJS?",
+            "activityDate": "2019-02-10T00:00:00",
+            "userName": "harshit123",
+            "userId": "ace12cbe-905d-4dab-8f2d-79d54c2148f3"
+        },
+        {
+            "quesId": 10,
+            "question": "What is deep linking in AngularJS?",
+            "activityDate": "2019-02-09T00:00:00",
+            "userName": "harshit123",
+            "userId": "ace12cbe-905d-4dab-8f2d-79d54c2148f3"
+        },
+        {
+            "quesId": 9,
+            "question": "What is routing in AngularJS?",
+            "activityDate": "2019-02-08T00:00:00",
+            "userName": "harshit",
+            "userId": "22b468cf-532f-4045-8c91-797091df25d5"
+        },
+        {
+            "quesId": 8,
+            "question": "Explain templates in AngularJS.",
+            "activityDate": "2019-02-07T00:00:00",
+            "userName": "harshit",
+            "userId": "22b468cf-532f-4045-8c91-797091df25d5"
+        },
+        {
+            "quesId": 7,
+            "question": "Explain directives in AngularJS",
+            "activityDate": "2019-02-06T00:00:00",
+            "userName": "harshit123",
+            "userId": "ace12cbe-905d-4dab-8f2d-79d54c2148f3"
+        }
+    ],
+    "records": {
+        "total": 15,
+        "pageNo": 1,
+        "returned": 10
+    },
+    "filters": null,
+    "search": null,
+    "sort": {
+        "field": "ActivityDate",
+        "order": "Desc"
+    }
+ }

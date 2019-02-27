@@ -3,9 +3,36 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-      <div class="collection" *ngFor="let q of homeQues.questionList" style="background-color: red">
+      <div class="collection QuesDiv" *ngFor="let q of homeQues.questionList" style="background-color: red">
 
          <a routerLink="/answers/{{q.quesId}}" class="collection-item" >{{q.question}}</a> 
       </div>
-      <app-question-pagination></app-question-pagination>
+
+
+
+      <div class="main">
+         <div class="Pager">
+           <a (click)='Nav("f")' >FIRST</a>
+           </div>
+           <div class="Pager">
+           <a (click)='Nav("p")'>PREV</a>
+           </div>
+           <div class="Pager">
+           <input #jumper type="number" min="1" width="1" height="2" required placeholder="Enter desired page">
+           <button (click)="jump(jumper.value)" class="JumpButton">Jump!</button>
+           </div>
+           <div class="Pager">
+           <a (click)='Nav("n")'>NEXT</a>
+           </div>
+           <div class="Pager">
+           <a (click)='Nav("l")'>LAST</a>
+           </div>
+           <br><br>
+           <br><br>
+           </div>
+           
+         <div class="CurrentPage" >
+           {{currentPage}} 
+         </div>
+      <!-- <app-question-pagination></app-question-pagination> -->
 
