@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HomeQuestion } from './home-question.model';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
@@ -10,30 +10,44 @@ import { Observable } from 'rxjs';
 export class HomeQuestionService {
 
 
-  questionList:HomeQuestion[];
+  questionList: HomeQuestion[];
 
-  readonly home_ques_url="http://09227a7c.ngrok.io/api/Questions/GetQuestions/1";
+  pageno:number=0;
+  totalpages:number;
 
-  goquesUrl = "http://09227a7c.ngrok.io/api/Questions/UploadQuestions";
+  readonly home_ques_url = "http://3cf0e117.ngrok.io/api/Questions/GetQuestions";
+  goquesUrl = "http://3cf0e117.ngrok.io/api/Questions/UploadQuestions";
+  readonly jump_home_ques_url = "http://3cf0e117.ngrok.io/api/Questions/GetQuestions/";
 
-  constructor(private http:HttpClient)
-   { }
 
-   getHomeQuestionList(){
+  // readonly home_ques_url = "../assets/test.json";
+  // goquesUrl = "http://17b7a39b.ngrok.io/api/Questions/UploadQuestions";
+  // readonly jump_home_ques_url = this.home_ques_url;
 
-       console.log('inside homeques');
-       
-   return  this.http.get(this.home_ques_url)
-   .toPromise().then(res=>this.questionList=res as HomeQuestion[]);
-   //console.log('after home');
-   
 
-   //console.log(questionList.questionData);
-   
-   
-   }
+  constructor(private http: HttpClient) { }
 
-   postQuestion(question){
-    return this.http.post(this.goquesUrl,question);
-   }
+  getHomeQuestionList() {
+
+    return this.http.get(this.home_ques_url + '/1', {}).toPromise();
+    this.pageno=1;
+
+  }
+
+  postQuestion(question) {
+    return this.http.post(this.goquesUrl, question);
+  
+  }
+  jumpToHomeQuestionList(pageNo:number) {
+
+
+    this.pageno=pageNo;
+    return this.http.get(this.jump_home_ques_url+this.pageno, {}).toPromise();
+
+
+  }
+
+
+
+
 }
