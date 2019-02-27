@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import { HomeQuestionService } from '../shared/home-question.service';
 
 @Component({
@@ -9,14 +9,14 @@ import { HomeQuestionService } from '../shared/home-question.service';
 })
 export class QuestionPaginationComponent implements OnInit {
 
-  constructor(private http:HttpClient,private questionSerivice:HomeQuestionService) { }
+  constructor(private http: HttpClient, private questionService: HomeQuestionService) { }
 
   ngOnInit() {
+    this.firstPage();
   }
-firstPage()
-{
-  this.questionSerivice.getHomeQuestionList();
 
-}
+  firstPage(){
+    this.questionService.getHomeQuestionList();
+  }
 
 }

@@ -12,7 +12,6 @@ import { AskQuestionComponent } from './ask-question/ask-question.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
 import { QuestionPaginationComponent } from './question-pagination/question-pagination.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +20,7 @@ import { QuestionPaginationComponent } from './question-pagination/question-pagi
     AnswersComponent,
     AskQuestionComponent,
     UploadImageComponent,
-    QuestionPaginationComponent
+    QuestionPaginationComponent,
   ],
   imports: [
     BrowserModule,
