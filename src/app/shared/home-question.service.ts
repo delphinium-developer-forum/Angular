@@ -15,9 +15,9 @@ export class HomeQuestionService {
   pageno:number=0;
   totalpages:number;
 
-  readonly home_ques_url = "http://3cf0e117.ngrok.io/api/Questions/GetQuestions";
-  goquesUrl = "http://3cf0e117.ngrok.io/api/Questions/UploadQuestions";
-  readonly jump_home_ques_url = "http://3cf0e117.ngrok.io/api/Questions/GetQuestions/";
+  readonly home_ques_url = "http://17b7a39b.ngrok.io/api/Questions/GetQuestions";
+  goquesUrl = "http://17b7a39b.ngrok.io/api/Questions/UploadQuestions";
+  readonly jump_home_ques_url = "http://17b7a39b.ngrok.io/api/Questions/GetQuestions/";
 
 
   // readonly home_ques_url = "../assets/test.json";

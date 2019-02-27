@@ -12,13 +12,26 @@ export class AnswersComponent implements OnInit {
 
   constructor(private answer : AnsersService,
               private route: ActivatedRoute, private http: HttpClient) { }
-
+    id2;
   ngOnInit() {
 
-   const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id);
+   const id = this.route.snapshot.paramMap.get('id');
+   this.id2=id;
+   const qname = this.route.snapshot.paramMap.get('question');
+    console.log(qname);
     
-    this.answer.getAnswerList(id);
+   // this.answer.getAnswerList(id);
+    this.answer.getAnswerList(id)
+    .then((data: any) => {
+      this.answer.pageno=data.records.pageNo;
+      this.answer.totalpages=data.records.total;
+      this.answer.totalpages=Math.ceil(this.answer.totalpages/10);
+      this.answer.answerList=data.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  
 
   }
 
@@ -82,5 +95,98 @@ export class AnswersComponent implements OnInit {
       }
       );
   }
+
+  currentPage:number;
+  Nav(code:string)
+  {
+  
+    this.currentPage=this.answer.pageno;
+  
+    if(code=="f")
+    {
+     
+   this.pageUpdater(1);
+    }
+  
+    if(code=="p")
+    {
+      if(this.currentPage-1<=0)
+      {
+      this.pageUpdater(1);
+      }
+      else
+      {
+      this.pageUpdater(this.currentPage-1);
+      }
+    }
+    
+  
+    if(code=="n")
+    {
+      if(this.currentPage+1>this.answer.totalpages)
+      {
+      this.pageUpdater(this.answer.totalpages);
+      }
+      else
+      {
+      this.pageUpdater(this.currentPage+1);
+      }
+    }
+    if(code=="l")
+    {
+      this.pageUpdater(this.answer.totalpages);
+
+     }
+      
+  
+    this.currentPage=this.answer.pageno;
+   
+  }
+  jump(pageNo)
+  {
+    
+    if((pageNo>0)&&(pageNo<=this.answer.totalpages))
+    {
+     this.pageUpdater(pageNo);
+     this.currentPage=this.answer.pageno;
+   }
+    else if(pageNo<=0)
+    {
+      this.pageUpdater(1);
+      this.currentPage=this.answer.pageno;
+   
+    }
+    else
+    {
+      this.pageUpdater(this.answer.totalpages);
+      this.currentPage=this.answer.pageno;
+   
+    }
+   
+  }
+  
+  
+
+
+
+pageUpdater(page:number)
+{
+   this.answer.jumpToAnswerList(this.id2,page)
+    .then((data: any) => {
+      this.answer.pageno=data.records.pageNo;
+      this.answer.answerList=data.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+   }
+
+
+
+
+
+
+
+
 
 }

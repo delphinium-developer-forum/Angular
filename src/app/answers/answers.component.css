@@ -18,3 +18,29 @@
 .fontSizeClass{
     font-size: 130%;
 }
+
+.Pager{
+    float:left;
+    border-radius: 10px;
+    cursor:pointer;
+    
+    border-style: solid;
+    border-color:mediumvioletred;
+}
+.main{
+    margin-left: 32%;
+    margin-right: 30%;
+}
+.CurrentPage{
+    
+    text-align: center;
+    /* margin-left: 32%;
+    margin-right: 30%; */
+}
+.JumpButton{
+    text-align: center;
+    margin-left: 40%;
+}
+.QuesDiv{
+    text-align: center;
+}

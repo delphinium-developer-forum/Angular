@@ -15,17 +15,35 @@
   <div>
       <form #ansPosting="ngForm" (ngSubmit)="OnSubmit(answ.value,q.quesId)">
        <br>
-       <label><h5>Your Answer</h5></label> 
-        <input #answ type="text" name="answer" >
+       <label><h5>Post Your Answer Down Below</h5></label> 
+        <input #answ type="text" name="answer" placeholder="Your answer over here" >
     <button type="submit">Submit</button>
     </form>
     </div>
 
 
-<!--<div>
-  <form #ansPosting="ngForm" (ngSubmit)="OnSubmit(answ.value)">
-    <label>Your Answer</label>
-    <input #answ type="text" name="answer" >
-<button type="submit">Submit</button>
-</form>
-</div>-->
+
+    <div class="main">
+      <div class="Pager">
+        <a (click)='Nav("f")' >FIRST</a>
+        </div>
+        <div class="Pager">
+        <a (click)='Nav("p")'>PREV</a>
+        </div>
+        <div class="Pager">
+        <input #jumper type="number" min="1" width="1" height="2" required placeholder="Enter desired page">
+        <button (click)="jump(jumper.value)" class="JumpButton">Jump!</button>
+        </div>
+        <div class="Pager">
+        <a (click)='Nav("n")'>NEXT</a>
+        </div>
+        <div class="Pager">
+        <a (click)='Nav("l")'>LAST</a>
+        </div>
+        <br><br>
+        <br><br>
+        </div>
+        
+      <div class="CurrentPage" >
+        {{currentPage}} 
+      </div>

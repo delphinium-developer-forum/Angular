@@ -15,18 +15,19 @@ export class AnsersService {
 
 
   go : answerdata;
-
+  pageno:number;
+  totalpages:number;
 
   answerList:Answer[];
 
-  readonly goquesUrl = "http://09227a7c.ngrok.io/api/Questions/UploadQuestions";
+  readonly goquesUrl = "http://579616d4.ngrok.io/api/Questions/UploadQuestions";
 
 
-  readonly home_ques_url="http://09227a7c.ngrok.io/api/Answers/GetAnswers/";
+  readonly home_ques_url="http://579616d4.ngrok.io/api/Answers/GetAnswers/";
 
-  answerUrl = "http://09227a7c.ngrok.io/api/Answers/UploadAnswers";
+  answerUrl = "http://579616d4.ngrok.io/api/Answers/UploadAnswers";
 
-  voteUrl = "http://09227a7c.ngrok.io/api/Votes/UploadVotes";
+  voteUrl = "http://579616d4.ngrok.io/api/Votes/UploadVotes";
 
   constructor(private http:HttpClient)
    { }
@@ -37,7 +38,7 @@ export class AnsersService {
        
 
    return  this.http.get(this.home_ques_url + id +'/1')
-   .toPromise().then(res=>this.answerList=res as Answer[]);
+   .toPromise();//.then(res=>this.answerList=res as Answer[]);
    //console.log('after home');
    
 
@@ -46,6 +47,16 @@ export class AnsersService {
    
    }
 
+
+   jumpToAnswerList(quesid:number,pagenumber:number){
+
+    console.log('inside ansques');
+    
+
+return  this.http.get(this.home_ques_url + quesid +'/1')
+.toPromise().then(res=>this.answerList=res as Answer[]);
+
+   }
   postAnswer(answ:NgForm){
 
     //this.go.Id="dummy";
