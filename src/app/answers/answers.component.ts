@@ -31,12 +31,12 @@ export class AnswersComponent implements OnInit {
       
     this.http.post(this.answer.answerUrl,
       {
-        "ansId":"13",
+        // "ansId":"13",
+        // "Id": "dummy",
+        // "votes": '-1'
+        "quesId": qid,
         "Id": "dummy",
-        "votes": '-1'
-        //"quesId": qid,
-        //"Id": "dummy",
-        //"answer": ans
+        "answer": ans
       }).subscribe(data=>{
         console.log("Post rewquest successful",data);
       },
